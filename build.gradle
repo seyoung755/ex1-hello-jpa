@@ -10,10 +10,11 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.hibernate:hibernate-entitymanager:5.3.10.Final' // JPA 구현체로 Hibernate 선택
-    runtimeOnly 'com.h2database:h2:2.0.206'
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    implementation 'org.hibernate:hibernate-entitymanager:5.6.8.Final' // JPA 구현체로 Hibernate 선택
+    implementation 'javax.xml.bind:jaxb-api:2.4.0-b180830.0359'
+    runtimeOnly 'com.h2database:h2:2.1.212'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
 }
 
 test {
