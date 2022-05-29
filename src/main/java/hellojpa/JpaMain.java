@@ -17,16 +17,14 @@ public class JpaMain {
         tx.begin();
 
         try {
-//            Member member = new Member();
-//            member.setId(1L);
-//            member.setName("HelloA");
 
-//            Member findMember = em.find(Member.class, 1L);
-            List<Member> members = em.createQuery("select m from Member as m", Member.class).getResultList();
-//            findMember.setName("helloJPA");
-            for (Member member : members) {
-                System.out.println("member.getName() = " + member.getName());
-            }
+            Member member1 = new Member(150L, "A");
+            Member member2 = new Member(160L, "B");
+
+            em.persist(member1);
+            em.persist(member2);
+
+            System.out.println("=================");
 
             tx.commit();
         } catch (Exception e) {
